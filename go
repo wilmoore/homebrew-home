@@ -71,7 +71,7 @@ pass "successfully created ($HOMEBREW_PREFIX) directory."
 say  "attempting to download homebrew."
 
 curl -#fsSL http://github.com/mxcl/homebrew/tarball/master | \
-  tar xz --strip 1 -C $HOMEBREW_PREFIX || fail "Unable to install homebrew"
+  tar xz --strip 1 -C $HOMEBREW_PREFIX || fail "Unable to download homebrew...aborting!"
 
 pass "successfully downloaded homebrew."
 
