@@ -80,18 +80,17 @@ pass "successfully downloaded homebrew."
 #
 
 $HOMEBREW_PREFIX/bin/brew update
-$HOMEBREW_PREFIX/bin/brew upgrade
 
 #
 # user configuration
 #
 
-say  'Add the following to your $PATH and $MANPATH respectively'
-say  "$HOMEBREW_PREFIX/bin"
-say  "$HOMEBREW_PREFIX/share/man"
+say  'You should add the following to your $PATH and $MANPATH respectively'
+say  '$HOME/.homebrew/bin'
+say  '$HOME/.homebrew/share/man'
 
 #
-# user configuration
+# success
 #
 
 fin "homebrew installed successfully!"
