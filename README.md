@@ -8,6 +8,8 @@ Homebrew install for those that like to Homebrew @ $HOME
 -   You believe (and have witnessed) that the pitfalls of installing into `/usr/local` are far greater than the alternative.
 -   You die a little inside when you try to fathom typing `sudo chown -R $USER /usr/local` or `sudo brew install ...`.
 -   You agree with most or all of [this article](http://ascarter.net/2010/02/22/homebrew-for-os-x.html).
+-   You are tired of addressing `brew doctor` issue because lots of software expects to be able to install into `/usr/local`.
+
 
 
 ## This is _NOT_ for you if
@@ -23,6 +25,12 @@ Homebrew install for those that like to Homebrew @ $HOME
 ## Un-Install
 
     % rm -rf ~/.homebrew
+
+
+## Non-exhaustive list of software known to install into `/usr/local`
+
+-   Kaleidoscope (kdiff)
+-   Heroku tools
 
 
 ## LICENSE
