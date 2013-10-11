@@ -1,6 +1,6 @@
 # Homebrew @ $HOME
 
-Homebrew install for those that like to Homebrew @ $HOME
+Homebrew install for those that like to Homebrew @ $HOME (i.e. ~/.homebrew).
 
 
 ## This _IS_ for you if
