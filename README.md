@@ -15,8 +15,8 @@ Homebrew install for those that like to Homebrew @ $HOME (i.e. ~/.homebrew).
 The following `brew doctor` warning can be ignored:
 
 > Warning: Your Homebrew is not installed to /usr/local
-> You can install Homebrew anywhere you want, but some brews may only build
-> correctly if you install in /usr/local. Sorry!
+
+> You can install Homebrew anywhere you want, but some brews may only build correctly if you install in /usr/local. Sorry!
 
 ## More Info
 
