@@ -7,6 +7,7 @@ Homebrew install for those that like to Homebrew @ $HOME (i.e. ~/.homebrew).
 - Install your [own stuff][] to `/usr/local` without `brew doctor` complaining.
 - Allow programs like `Kaleidoscope` or `MacVim` to install its command-line helper without `brew doctor` complaining.
 - You'll never have to worry about using `chown` or [`sudo`][sudo] to get a formula installed.
+- The homebrew wiki lists a few reasons why installing to `/usr/local` [is easier][]; however, I believe their list to be slightly (but not intentionally) misleading. Developers are problems solvers; thus, I don't believe that adding a step to update a shell `$PATH` variable is worth avoiding, especially given the benefits.
 
 ## Is this safe?
 
@@ -42,3 +43,4 @@ The following `brew doctor` warning can be ignored (see [Is this safe?](#is-this
 [sudo]: https://github.com/Homebrew/homebrew/wiki/FAQ#wiki-sudo
 [uninstall]: https://github.com/Homebrew/homebrew/wiki/FAQ#wiki-sudo
 [own stuff]: https://github.com/Homebrew/homebrew/wiki/FAQ#wiki-can-i-install-my-own-stuff-to-usrlocal
+[is easier]: https://github.com/Homebrew/homebrew/wiki/FAQ#wiki-why-does-homebrew-insist-i-install-to-usrlocal-with-such-vehemence
