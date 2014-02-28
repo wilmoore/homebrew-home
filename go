@@ -1,5 +1,5 @@
 ################################################################################
-# System Bootstrap
+# Installs Homebrew @ $HOME/.homebrew
 # Wil Moore III <wil.moore@wilmoore.com>
 # 
 # This is meant to be invoked via:
