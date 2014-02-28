@@ -2,7 +2,19 @@
 
 Homebrew install for those that like to Homebrew @ $HOME (i.e. ~/.homebrew).
 
+## Benefits
+
+- Install your [own stuff][] to `/usr/local` without `brew doctor` complaining.
+- Allow programs like `Kaleidoscope` or `MacVim` to install its command-line helper without `brew doctor` complaining.
+- You'll never have to worry about using `chown` or [`sudo`][sudo] to get a formula installed.
+
+## Is this safe?
+
+I wrote the install script such that it downloads the latest homebrew from the canonical respository and simply unarchives it into the `~/.homebrew` prefix. That's it. This installation method is documented on the homebrew wiki; though, I don't think it is officially supported. That being said, I've been running homebrew this way for over a year and since then, I __NEVER__ see new `brew doctor` warnings (besides the safe one depicted below).
+
 ## Install
+
+NOTE: if you already have homebrew installed, you should [uninstall][] it first (especially if you installed it or any formula using `sudo`).
 
     % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
 
@@ -12,7 +24,7 @@ Homebrew install for those that like to Homebrew @ $HOME (i.e. ~/.homebrew).
 
 ## Warnings
 
-The following `brew doctor` warning can be ignored:
+The following `brew doctor` warning can be ignored (see [Is this safe?](#is-this-safe)):
 
 > Warning: Your Homebrew is not installed to /usr/local
 
@@ -26,3 +38,7 @@ The following `brew doctor` warning can be ignored:
 ## LICENSE
 
   MIT
+
+[sudo]: https://github.com/Homebrew/homebrew/wiki/FAQ#wiki-sudo
+[uninstall]: https://github.com/Homebrew/homebrew/wiki/FAQ#wiki-sudo
+[own stuff]: https://github.com/Homebrew/homebrew/wiki/FAQ#wiki-can-i-install-my-own-stuff-to-usrlocal
