@@ -70,7 +70,7 @@ pass "successfully created ($HOMEBREW_PREFIX) directory."
 
 say  "attempting to download homebrew."
 
-curl -#fsSL http://github.com/mxcl/homebrew/tarball/master | \
+curl -#fSL http://github.com/mxcl/homebrew/tarball/master | \
   tar xz --strip 1 -C $HOMEBREW_PREFIX || fail "Unable to download homebrew...aborting!"
 
 pass "successfully downloaded homebrew."
@@ -79,6 +79,8 @@ pass "successfully downloaded homebrew."
 # initialize
 #
 
+export PATH=$HOME/.homebrew/bin:$PATH
+$HOMEBREW_PREFIX/bin/brew install git
 $HOMEBREW_PREFIX/bin/brew update
 
 #
