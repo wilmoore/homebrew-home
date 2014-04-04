@@ -79,7 +79,7 @@ pass "successfully downloaded homebrew."
 # initialize
 #
 
-export PATH=$HOME/.homebrew/bin:$PATH
+export PATH=$HOMEBREW_PREFIX/bin:$PATH
 $HOMEBREW_PREFIX/bin/brew install git
 $HOMEBREW_PREFIX/bin/brew update
 
