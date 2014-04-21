@@ -79,15 +79,21 @@ pass "successfully downloaded homebrew."
 # initialize
 #
 
+# gain access to the `brew` command immediately.
 export PATH=$HOMEBREW_PREFIX/bin:$PATH
+hash -r
+
+# homebrew needs git to update.
 $HOMEBREW_PREFIX/bin/brew install git
+
+# update homebrew to latest (you'd be surprised how often this actually must be done).
 $HOMEBREW_PREFIX/bin/brew update
 
 #
 # user configuration
 #
 
-say  'You should add the following to your $PATH and $MANPATH respectively'
+say  'You should add the following to your $PATH and $MANPATH respectively so the `brew` command is available when you open a new terminal window/tab.'
 say  '$HOME/.homebrew/bin'
 say  '$HOME/.homebrew/share/man'
 
