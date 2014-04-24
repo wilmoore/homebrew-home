@@ -1,6 +1,6 @@
 # Homebrew @ $HOME
 
-> A alternative Homebrew installation script that eliminates annoying `brew doctor` notices by putting Homebrew into `~/.homebrew` instead of `/usr/local`.
+> An alternative Homebrew installation script that eliminates annoying `brew doctor` notices by putting Homebrew into `~/.homebrew` instead of `/usr/local`.
 
 ## Benefits
 
