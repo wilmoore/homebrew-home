@@ -3,7 +3,7 @@
 # Wil Moore III <wil.moore@wilmoore.com>
 # 
 # This is meant to be invoked via:
-# bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
+# bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/install)
 ################################################################################
 
 set -e
