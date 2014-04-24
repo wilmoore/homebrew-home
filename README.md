@@ -1,23 +1,24 @@
 # Homebrew @ $HOME
 
-Homebrew install for those that like to Homebrew @ $HOME (i.e. ~/.homebrew).
+> A alternative Homebrew installation script that eliminates annoying `brew doctor` notices by putting Homebrew into `~/.homebrew` instead of `/usr/local`.
 
 ## Benefits
 
 - Install your [own stuff][] to `/usr/local` without `brew doctor` complaining.
-- Allow programs like `Kaleidoscope` or `MacVim` to install its command-line helper without `brew doctor` complaining.
-- You'll never have to worry about using [`chown`][chown] or [`sudo`][sudo] to get a formula installed.
-- The homebrew wiki lists a few reasons why installing to `/usr/local` [is easier][]; however, I believe their list to be slightly (but not intentionally) misleading. Developers are problems solvers; thus, I don't believe that adding a step to update a shell `$PATH` variable is worth avoiding, especially given the benefits.
+- Allow programs like `Kaleidoscope` or `MacVim` to install its command-line helper to `/usr/local` without `brew doctor` complaining.
+- You'll never have to do crazy things like [`chown /usr/local`][chown] or [`sudo brew install`][sudo].
 
 ## Is this safe?
 
-I wrote the install script such that it downloads the latest homebrew from the canonical respository and simply unarchives it into the `~/.homebrew` prefix. That's it. This installation method is documented on the homebrew wiki; though, I don't think it is officially supported. That being said, I've been running homebrew this way for over a year and since then, I __NEVER__ see new `brew doctor` warnings (besides the safe one depicted below).
+YES! This method of installation is well documented on the homebrew wiki. It downloads the _latest_ homebrew from the canonical respository and unarchives into `~/.homebrew`. That's it!
+
+No more random `brew doctor` warnings (besides the safe one as noted below). This is a huge improvement over the default installation.
 
 ## Install
 
 NOTE: if you already have homebrew installed, you should [uninstall][] it first (especially if you installed it or any formula using `sudo`).
 
-    % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/go)
+    % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/install)
 
 ## Un-Install
 
