@@ -18,7 +18,7 @@ No more random `brew doctor` warnings (besides the safe one as noted below). Thi
 
 NOTE: if you already have homebrew installed, you should [uninstall][] it first (especially if you installed it or any formula using `sudo`).
 
-    % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/install)
+    % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
 
 ## Un-Install
 
