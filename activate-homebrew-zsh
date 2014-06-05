@@ -1,0 +1,58 @@
+################################################################################
+# Installs Homebrew's ZSH and uses it as default $SHELL
+# Wil Moore III <wil.moore@wilmoore.com>
+#
+# This is meant to be invoked via:
+# bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
+################################################################################
+
+################################################################################
+# output functions
+################################################################################
+
+say () {
+  printf "\r [ \033[00;34m..\033[0m ] $1\n"
+}
+
+ask () {
+  printf "\r [ \033[0;33m??\033[0m ] $1\n"
+}
+
+pass () {
+  printf "\r\033[2K [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+fin () {
+  printf "\r\033[2K [ \033[00;32mOK\033[0m ] $1\n"
+  echo ''
+  exit 0
+}
+
+fail () {
+  printf "\r\033[2K [\033[0;31mFAIL\033[0m] $1\n"
+  echo ''
+  exit 1
+}
+
+################################################################################
+# install homebrew @ $HOME
+################################################################################
+
+say "Preparing to install homebrew ZSH."
+
+brew install zsh || fail "Unable to download homebrew...aborting!"
+
+say "Updating /etc/shells with homebrew ZSH."
+
+grep -xq "$(brew --prefix zsh)/bin/zsh" /etc/shells || sudo sh -c 'printf "%s\n" "$(brew --prefix zsh)/bin/zsh" >> /etc/shells'
+grep -xq "$(brew --prefix zsh)/bin/zsh" /etc/shells || fail 'Unable to whitelist $(brew --prefix zsh)/bin/zsh'
+
+say "Preparing to change your default shell to ZSH."
+chsh -s $(brew --prefix zsh)/bin/zsh
+
+#
+# success
+#
+
+fin "Successfully installed ZSH ($(brew --prefix zsh)/bin/zsh) and set it as default \$SHELL!"
+

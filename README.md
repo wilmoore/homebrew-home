@@ -20,6 +20,12 @@ NOTE: if you already have homebrew installed, you should [uninstall][] it first 
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
 
+Once installation is complete, you'll need to make sure homebrew's paths are configured into your shell environment. Add `$HOME/.homebrew/{bin,sbin}` to `$PATH` and `$HOME/.homebrew/share/man:$MANPATH` to `$MANPATH` respectively to your shell RC file. My dotfiles repo depicts an example of this in my [.zshenv](https://github.com/wilmoore/dotfiles/blob/master/active/.config/zsh/.zshenv#L41-L52).
+
+NOTE: I use ZSH; however, you can adapt the variable setting to the shell of your choice. If you'd like to install ZSH, I have a little helper script that will get you up and running quickly.
+
+    % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
+
 ## Un-Install
 
     % rm -rf ~/.homebrew
