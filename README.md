@@ -24,7 +24,7 @@ Once installation is complete, you'll need to make sure homebrew's paths are con
 
 NOTE: I use ZSH; however, you can adapt the variable setting to the shell of your choice. If you'd like to install ZSH, I have a little helper script that will get you up and running quickly.
 
-    % bash < <(curl -s https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
+    % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/activate-homebrew-zsh)
 
 ## Un-Install
 
