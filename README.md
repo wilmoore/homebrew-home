@@ -16,7 +16,7 @@ No more random `brew doctor` warnings (besides the safe one as noted below). Thi
 
 ## Install
 
-NOTE: if you already have homebrew installed, you should [uninstall][] it first (especially if you installed it or any formula using `sudo`).
+NOTE: if you already have homebrew installed, you should [uninstall][] it first (especially if you installed it or any formula using `sudo`). It is also recommended that you install either Xcode or the command-line developer tools and agree to the license as [depicted here](https://github.com/wilmoore/system/blob/master/README.md#2-install-xcode-and-the-command-line-developer-tools-).
 
     % bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
 
