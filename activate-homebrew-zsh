@@ -40,19 +40,19 @@ fail () {
 
 say "Preparing to install homebrew ZSH."
 
-brew install zsh || fail "Unable to download homebrew...aborting!"
+~/.homebrew/bin/brew install zsh || fail "Unable to download homebrew...aborting!"
 
 say "Updating /etc/shells with homebrew ZSH."
 
-grep -xq "$(brew --prefix zsh)/bin/zsh" /etc/shells || sudo sh -c 'printf "%s\n" "$(brew --prefix zsh)/bin/zsh" >> /etc/shells'
-grep -xq "$(brew --prefix zsh)/bin/zsh" /etc/shells || fail 'Unable to whitelist $(brew --prefix zsh)/bin/zsh'
+grep -xq "$(~/.homebrew/bin/brew --prefix zsh)/bin/zsh" /etc/shells || sudo sh -c 'printf "%s\n" "$(brew --prefix zsh)/bin/zsh" >> /etc/shells'
+grep -xq "$(~/.homebrew/bin/brew --prefix zsh)/bin/zsh" /etc/shells || fail 'Unable to whitelist $(brew --prefix zsh)/bin/zsh'
 
 say "Preparing to change your default shell to ZSH."
-chsh -s $(brew --prefix zsh)/bin/zsh
+chsh -s $(~/.homebrew/bin/brew --prefix zsh)/bin/zsh
 
 #
 # success
 #
 
-fin "Successfully installed ZSH ($(brew --prefix zsh)/bin/zsh) and set it as default \$SHELL!"
+fin "Successfully installed ZSH ($(~/.homebrew/bin/brew --prefix zsh)/bin/zsh) and set it as default \$SHELL!"
 
