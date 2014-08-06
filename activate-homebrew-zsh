@@ -44,8 +44,8 @@ say "Preparing to install homebrew ZSH."
 
 say "Updating /etc/shells with homebrew ZSH."
 
-grep -xq "$(~/.homebrew/bin/brew --prefix zsh)/bin/zsh" /etc/shells || sudo sh -c 'printf "%s\n" "$(brew --prefix zsh)/bin/zsh" >> /etc/shells'
-grep -xq "$(~/.homebrew/bin/brew --prefix zsh)/bin/zsh" /etc/shells || fail 'Unable to whitelist $(brew --prefix zsh)/bin/zsh'
+grep -xq "$(~/.homebrew/bin/brew --prefix zsh)/bin/zsh" /etc/shells || sudo sh -c 'printf "%s\n" "$(~/.homebrew/bin/brew --prefix zsh)/bin/zsh" >> /etc/shells'
+grep -xq "$(~/.homebrew/bin/brew --prefix zsh)/bin/zsh" /etc/shells || fail 'Unable to whitelist $(~/.homebrew/bin/brew --prefix zsh)/bin/zsh'
 
 say "Preparing to change your default shell to ZSH."
 chsh -s $(~/.homebrew/bin/brew --prefix zsh)/bin/zsh
