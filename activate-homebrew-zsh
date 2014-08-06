@@ -40,7 +40,7 @@ fail () {
 
 say "Preparing to install homebrew ZSH."
 
-~/.homebrew/bin/brew install zsh || fail "Unable to download homebrew...aborting!"
+~/.homebrew/bin/brew install zsh || fail "Unable to install homebrew ZSH...aborting!"
 
 say "Updating /etc/shells with homebrew ZSH."
 
