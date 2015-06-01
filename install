@@ -51,6 +51,7 @@ say "Preparing to install homebrew to ($HOMEBREW_PREFIX)."
 if [[ -d $HOMEBREW_PREFIX ]]; then
   pass "found existing homebrew at ($HOMEBREW_PREFIX)...moving on!"
   export PATH=$HOMEBREW_PREFIX/bin:$PATH
+  hash -r
   exit 0
 fi
 
