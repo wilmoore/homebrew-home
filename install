@@ -85,11 +85,11 @@ pass "successfully downloaded homebrew."
 export PATH=$HOMEBREW_PREFIX/bin:$PATH
 hash -r
 
-# homebrew needs git to update.
-$HOMEBREW_PREFIX/bin/brew install git
-
 # update homebrew to latest (you'd be surprised how often this actually must be done).
 $HOMEBREW_PREFIX/bin/brew update
+
+# homebrew needs git to update.
+$HOMEBREW_PREFIX/bin/brew install git
 
 #
 # user configuration
